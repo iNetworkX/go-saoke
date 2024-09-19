@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem Tra Sao Ke</title>
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+
+<body>
+    <h1>Kiem Tra Sao Ke</h1>
+
+    <form hx-post="/saoke" hx-target="#output">
+        <label for="data">Xin Nhap Ma So Giao Dich:</label>
+        <input type="text" id="data" name="data">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="output"> {{ .name }}</div>
+
+</body>
+
+</html>
